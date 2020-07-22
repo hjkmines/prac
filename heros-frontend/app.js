@@ -5,7 +5,7 @@ fetch("http://localhost:3000/heros")
   .then(parsedResponse => {
     parsedResponse.map(superhero => {
       const $li = document.createElement("li")
-      $li.textContent = superhero.name 
+      $li.innerHTML = `<a href=superhero.html?id=${superhero.id}>${superhero.name}</a>` 
       return $li 
     }).forEach($li => {
       $ul.append($li)
