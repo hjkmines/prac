@@ -7,7 +7,7 @@ fetch(`http://localhost:3000/heros/${id}`)
   .then(response => response.json())
   .then(response => {
     const $h1 = document.createElement("h1")
-    $h1.textContent = response.name 
+    $h1.textContent = `name: ${response.name}  -  Super Name: ${super_name}` 
     document.body.prepend($h1) 
 
     response.powers.map(power => {
